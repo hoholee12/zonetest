@@ -1,0 +1,17 @@
+[global]
+ioengine=libaio
+invalidate=1
+ramp_time=5
+iodepth=32
+runtime=30
+time_based
+size=128G
+
+[write-fio-4k-para]
+bs=4k
+stonewall
+filename=/home/jeongho/mnt/fiotest
+rw=write
+write_bw_log=4k-write.results
+write_iops_log=4k-write.results
+write_lat_log=4k-write.results
