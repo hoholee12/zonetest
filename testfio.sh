@@ -7,10 +7,12 @@ if [[ $log_loc == "results/" ]]; then
 fi
 rm $log_loc*.log 2>/dev/null
 
+#read, write, randread, randwrite, readwrite or rw, randrw
+
 fio \
 -direct=1 \
 -iodepth=128 \
--rw=randwrite \
+-rw=write \
 -ioengine=libaio \
 -bs=4K \
 -size=64G \
