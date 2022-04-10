@@ -31,28 +31,28 @@
 #./testfio.sh zone200mb
 
 #2gb
-./sata_f2fs_custom.sh 1 1000
+./nvme_f2fs_custom.sh 1 1000
 ./fragment.sh
 #./justfill.sh
 #iozone -R -b bench2.xls -i 0 -i 1 -s 10G -f /home/jeongho/mnt/iozonetest
 ./testfio.sh zone2gb
 
 #4gb
-./sata_f2fs_custom.sh 1 2000
+./nvme_f2fs_custom.sh 1 2000
 ./fragment.sh
 #./justfill.sh
 #iozone -R -b bench2.xls -i 0 -i 1 -s 10G -f /home/jeongho/mnt/iozonetest
 ./testfio.sh zone4gb
 
 #8gb
-./sata_f2fs_custom.sh 1 4000
+./nvme_f2fs_custom.sh 1 4000
 ./fragment.sh
 #./justfill.sh
 #iozone -R -b bench2.xls -i 0 -i 1 -s 10G -f /home/jeongho/mnt/iozonetest
 ./testfio.sh zone8gb
 
 #16gb
-./sata_f2fs_custom.sh 1 8000
+./nvme_f2fs_custom.sh 1 8000
 ./fragment.sh
 #./justfill.sh
 #iozone -R -b bench2.xls -i 0 -i 1 -s 10G -f /home/jeongho/mnt/iozonetest
