@@ -9,13 +9,17 @@ rm $log_loc*.log 2>/dev/null
 
 #read, write, randread, randwrite, readwrite or rw, randrw
 
+filesize=$(($(df -h | grep "/home/jeongho/mnt" | awk '{print $2}' | sed 's/G//g')/3))
+filesize=64
+echo filesize to test: "$filesize"GB
+
 fio \
 -direct=1 \
 -iodepth=128 \
 -rw=write \
 -ioengine=libaio \
 -bs=4K \
--size=64G \
+-size="$filesize"G \
 -numjobs=1 \
 -runtime=1000 \
 -group_reporting \
